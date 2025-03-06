@@ -65,6 +65,7 @@
     <style>
         body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; }
         .container { max-width: 90%; margin: auto; padding: 15px; }
+        .input-container { display: flex; flex-direction: column; align-items: center; }
         button, input { padding: 15px; margin: 10px 0; width: 100%; max-width: 300px; font-size: 18px; }
         .golden-box { background-color: gold; padding: 20px; font-weight: bold; border-radius: 5px; margin-top: 20px; }
         .footer-text { color: #007bff; font-weight: bold; font-size: 18px; margin-top: 20px; }
@@ -76,8 +77,10 @@
     <div class="container">
         <h2>What is Procurement?</h2>
         <form onsubmit="event.preventDefault(); submitWord();">
-            <input type="text" id="wordInput" placeholder="Enter a word">
-            <button type="submit">Submit Word</button>
+            <div class="input-container">
+                <input type="text" id="wordInput" placeholder="Enter a word">
+                <button type="submit">Submit Word</button>
+            </div>
         </form>
         <canvas id="wordCloudCanvas" width="400" height="200"></canvas>
         <button class="reset-button" onclick="resetWordCloud()">Reset</button>
