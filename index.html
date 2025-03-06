@@ -45,7 +45,7 @@
 
         function updateWordCloud(words) {
             const canvas = document.getElementById("wordCloudCanvas");
-            WordCloud(canvas, { list: words, gridSize: 10, weightFactor: (size) => size * 15, color: "random-dark" });
+            WordCloud(canvas, { list: words, gridSize: 10, weightFactor: (size) => size * 4, color: "random-dark" });
         }
 
         onValue(wordsRef, (snapshot) => {
