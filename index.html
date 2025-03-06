@@ -45,7 +45,7 @@
 
         function updateWordCloud(words) {
             const canvas = document.getElementById("wordCloudCanvas");
-            WordCloud(canvas, { list: words, gridSize: 10, weightFactor: (size) => size * 2, color: "random-dark" });
+            WordCloud(canvas, { list: words, gridSize: 10, weightFactor: (size) => size * 15, color: "random-dark" });
         }
 
         onValue(wordsRef, (snapshot) => {
@@ -65,9 +65,10 @@
     <style>
         body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; }
         .container { max-width: 90%; margin: auto; padding: 15px; }
-        .header-image { width: 350px; display: block; margin: 20px auto; }
         .input-container { display: flex; flex-direction: column; align-items: center; }
-        button, input { padding: 15px; margin: 10px 0; width: 100%; max-width: 300px; font-size: 18px; }
+        button, input { padding: 15px; margin: 10px 0; width: 100%; max-width: 300px; font-size: 25px; }
+        h2 { font-size: 50px; } /* Increase the size of the "What is Procurement?" text */
+        button { font-size: 40px; } /* Increase the font size of the submit button text */
         .golden-box { background-color: gold; padding: 20px; font-weight: bold; border-radius: 5px; margin-top: 20px; }
         .footer-text { color: #007bff; font-weight: bold; font-size: 18px; margin-top: 20px; }
         .reset-button { background-color: green; color: white; padding: 3px 6px; font-size: 12px; border: none; border-radius: 5px; cursor: pointer; display: block; margin: 10px auto; }
@@ -83,7 +84,7 @@
                 <button type="submit">Submit Word</button>
             </div>
         </form>
-        <canvas id="wordCloudCanvas" width="400" height="200"></canvas>
+        <canvas id="wordCloudCanvas" width="800" height="600"></canvas>
         <button class="reset-button" onclick="resetWordCloud()">Reset</button>
     </div>
     <div class="footer-text">
